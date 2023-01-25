@@ -1,0 +1,77 @@
+@import "../.././scss/utils/config";
+@import "../.././scss/utils/color";
+.navbar {
+  @include Flex-Box(row, center, center);
+  width: 100%;
+  padding-top: 10px;
+  font-family: "Vazir-Regular";
+  font-size: 20px;
+  background-color: #2b3d4f;
+  img {
+    width: 220px;
+    height: 60px;
+    padding: 10px;
+  }
+  nav {
+    .nav {
+      @include Flex-Box(row, center, center);
+      li {
+        margin-right: 30px;
+        list-style-type: none;
+
+        .link {
+          color: $white;
+          text-decoration: none;
+          font-style: bold;
+        }
+        .active {
+          color: $white;
+          text-decoration: none;
+          border-bottom: 3px solid $blue;
+        }
+      }
+    }
+  }
+  .search {
+    font-family: "Vazir-Regular";
+    width: 200px;
+    height: 50px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border: #9aa6ab 2px solid;
+    background-color: #2b3d4f;
+    text-align: right;
+    direction: rtl;
+    font-size: 20px;
+  }
+  .register {
+    box-sizing: border-box;
+    background-color: #e85234;
+    width: 90px;
+    height: 52px;
+    border: none;
+    font-family: "Vazir-Regular";
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    margin: 0 20px 0 20px;
+    box-shadow: 0px -14px 0px -7px rgba(83, 83, 83, 0.56) inset;
+    -webkit-box-shadow: 0px -14px 0px -7px rgba(56, 56, 56, 0.56) inset;
+    -moz-box-shadow: 0px -14px 0px -7px rgba(0,0,0,0.56) inset;
+    &:hover{
+      cursor: pointer;
+      box-shadow: none;
+    }
+  }
+  .login {
+    font-size: 30px;
+    background-color: #2b3d4f;
+    border: none;
+    font-family: "Vazir-Regular";
+    text-decoration: bold;
+    color: white;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

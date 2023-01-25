@@ -1,0 +1,160 @@
+@import "../.././scss/utils/config";
+@import "../.././scss/utils/color";
+
+.root {
+  @include Flex-Box(column, center, center);
+  font-family: "Vazir-Regular";
+  .landing {
+    @include Flex-Box(row-reverse, center, flex-start);
+    .landing_part {
+      @include Flex-Box(column, center, flex-start);
+      direction: rtl;
+      width: 800px;
+      .landing_img {
+        border-radius: 5px;
+      }
+      h3 {
+        color: #3695cd;
+      }
+    }
+    .email {
+      @include Flex-Box(column, flex-start, center);
+      margin: 30px 0 0 0;
+      width: 250px;
+      height: 400px;
+      background-color: #dbe0de;
+      border: solid 1px #b3b3b3;
+      border-radius: 10px;
+
+      .email_img {
+        width: 170px;
+        border-radius: 5px;
+      }
+      .email_input {
+        font-family: "Vazir-Regular";
+        width: 140px;
+        height: 40px;
+        border-radius: 10px;
+        border: #494949;
+        margin: 15px 0 15px 0;
+        text-align: right;
+        direction: rtl;
+        padding-right: 30px;
+      }
+      span {
+        font-size: 13px;
+        margin: 5px;
+      }
+      .email_button {
+        box-sizing: border-box;
+        background-color: #e85234;
+        width: 170px;
+        height: 50px;
+        border: none;
+        font-family: "Vazir-Regular";
+        font-size: 15px;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0px -14px 0px -7px rgba(83, 83, 83, 0.56) inset;
+        -webkit-box-shadow: 0px -14px 0px -7px rgba(56, 56, 56, 0.56) inset;
+        -moz-box-shadow: 0px -14px 0px -7px rgba(0, 0, 0, 0.56) inset;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .category {
+    @include Flex-Box(column, flex-start, flex-end);
+    width: 1050px;
+    font-family: "Vazir-Regular";
+    .category_type {
+      @include Flex-Box(row-reverse, center, space-around);
+      button {
+        box-sizing: content-box;
+        width: 200px;
+        height: 90px;
+        margin: 0 10px 0 30px;
+        border-radius: 5px;
+        border: none;
+        &:hover {
+          cursor: pointer;
+          filter: brightness(2);
+        }
+      }
+    }
+  }
+
+  .search {
+    @include Flex-Box(row-reverse, center, space-around);
+    margin-top: 40px;
+    margin-bottom: 50px;
+    input {
+      font-family: "Vazir-Regular";
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 800px;
+      height: 50px;
+      text-align: right;
+      direction: rtl;
+    }
+    button {
+      font-family: "Vazir-Regular";
+      box-sizing: border-box;
+      background-color: #e85234;
+      width: 200px;
+      height: 52px;
+      border: none;
+      font-family: "Vazir-Regular";
+      font-size: 20px;
+      color: white;
+      margin-right: 30px;
+      border-radius: 10px;
+      box-shadow: 0px -14px 0px -7px rgba(83, 83, 83, 0.56) inset;
+      -webkit-box-shadow: 0px -14px 0px -7px rgba(56, 56, 56, 0.56) inset;
+      -moz-box-shadow: 0px -14px 0px -7px rgba(0, 0, 0, 0.56) inset;
+      &:hover {
+        cursor: pointer;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .courses {
+    @include Flex-Box(column, flex-start, flex-end);
+    width: 1050px;
+    text-decoration: none;
+    .course_items {
+      @include Flex-Box(row-reverse, center, space-around);
+      .link {
+        text-decoration: none;
+        color: #494949;
+        width: 50%;
+        .course_item {
+          @include Flex-Box(column, flex-start, flex-end);
+          box-sizing: border-box;
+          &:hover {
+            border: #b3b3b3 solid;
+            border-radius: 10px;
+            background-color: #b3b3b3;
+            transition: 0.5s;
+          }
+          margin: 20px;
+          img {
+            border-radius: 10px;
+            width: 400px;
+          }
+          h3 {
+            color: #2694d5;
+          }
+          p {
+            text-align: justify;
+            direction: rtl;
+          }
+        }
+      }
+    }
+  }
+}

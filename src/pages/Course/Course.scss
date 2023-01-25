@@ -1,0 +1,27 @@
+@import "../.././scss/utils/config";
+@import "../.././scss/utils/color";
+
+.course_root {
+  @include Flex-Box(row, flex-end, flex-end);
+  .levels {
+    @include Flex-Box(column, flex-start, flex-start);
+    background: #2b3d4f;
+    direction: rtl;
+    height: 70vh;
+    .link {
+      @include Flex-Box(column, flex-end, flex-end);
+      direction: rtl;
+      text-decoration: none;
+      color: rgb(191, 191, 191);
+      padding: 10px 50px 10px 50px;
+      &:hover {
+        background-color: #18bb9b;
+      }
+      .link_item {
+      @include Flex-Box(column, flex-end, flex-end);
+        direction: rtl;
+        font-family: "Vazir-Regular";
+      }
+    }
+  }
+}

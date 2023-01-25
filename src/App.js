@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { ThemeProvider } from "@mui/material";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import theme from "./theme";
+import Main from './pages/Main';
+import Course from './pages/Course';
+import Learn from './pages/Learn';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/courses/:number" element={<Course/>} />
+        <Route path="/courses/:number/:level" element={<Learn/>} />
+      </Routes>
+    </ThemeProvider>
     </div>
   );
 }
